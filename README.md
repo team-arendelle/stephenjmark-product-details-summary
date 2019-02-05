@@ -1,13 +1,11 @@
 # Project Name
 
-> Project description
+AMAZONAS
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/team-arendelle/vinnyA3-add-to-cart
+  - https://github.com/team-arendelle/RossHathaway-reviews
 
 ## Table of Contents
 
@@ -23,8 +21,16 @@
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
-- Node 6.13.0
-- etc
+- Node v10.15.0
+- npm
+- JS ES6
+-Webpack
+-Webpack-dev-server
+-React
+-Sass
+-Bootstrap
+-SQLite
+
 
 ## Development
 
@@ -33,6 +39,7 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
+
 npm install -g webpack
 npm install
 ```
