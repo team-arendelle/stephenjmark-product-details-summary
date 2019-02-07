@@ -55,11 +55,51 @@ const insertProducts = () => {
 //Insert a single image into primary_image for each product
 const insertPrimaryImages = () => {
   let imageIndex = 1;
-  for (var i = 1; i <= 100; i++) {
+  for (var i = 16; i <= 100; i++) {
     let id = i;
     let url = `https://s3.us-east-2.amazonaws.com/sjm-pokemon/${imageIndex}.jpg`;
     imageIndex === 20 ? (imageIndex = 1) : (imageIndex += 1);
 
+    db.run(
+      `INSERT INTO primary_images (imgUrl, id_product) VALUES(?,?)`,
+      [url, id],
+      function(err) {
+        if (err) {
+          return console.log(err.message);
+        }
+        // get the last insert id
+        console.log(`A row has been inserted with rowid ${this.lastID}`);
+      }
+    );
+  }
+};
+
+//insert multiple view Primary Images **pichuu
+const insertMultiViewPrimaryImages = () => {
+  for (var i = 1; i <= 5; i++) {
+    let id = i;
+    for (var j = 26; j < 29; j++) {
+      let url = `https://s3.us-east-2.amazonaws.com/sjm-pokemon/${j}.jpg`;
+      db.run(
+        `INSERT INTO primary_images (imgUrl, id_product) VALUES(?,?)`,
+        [url, id],
+        function(err) {
+          if (err) {
+            return console.log(err.message);
+          }
+          // get the last insert id
+          console.log(`A row has been inserted with rowid ${this.lastID}`);
+        }
+      );
+    }
+  }
+};
+
+//insert multiple view Primary Images **evvee
+const insertPrimaryImagesForMultiOption = () => {
+  for (var i = 6; i <= 15; i++) {
+    let id = i;
+    let url = `https://s3.us-east-2.amazonaws.com/sjm-pokemon/24.jpg`;
     db.run(
       `INSERT INTO primary_images (imgUrl, id_product) VALUES(?,?)`,
       [url, id],
@@ -116,33 +156,67 @@ const insertTableOptions = () => {
   }
 };
 
-const insertTableOptions = () => {
+//insert size variations for select options
+const insertSelectVariations = () => {
+  let sizes = ["small", "medium", "large"];
+
+  for (var i = 1; i <= 10; i++) {
+    let id = i;
+    for (var j = 0; j < 3; j++) {
+      let name = sizes[j];
+      db.run(
+        `INSERT INTO variations ( name, id_options) VALUES(?,?)`,
+        [name, id],
+        function(err) {
+          if (err) {
+            return console.log(err.message);
+          }
+          // get the last insert id
+          console.log(`A row has been inserted with rowid ${this.lastID}`);
+        }
+      );
+    }
+  }
+};
+
+//insert color variations for select options
+const insertTableVariations = () => {
+  let color = ["yellow", "blue", "red", "brown", "green"];
   for (var i = 6; i <= 15; i++) {
-    let type = "table";
-    let name = "color";
     let id = i;
 
-    db.run(
-      `INSERT INTO options (type, option_name, id_product) VALUES(?,?,?)`,
-      [type, name, id],
-      function(err) {
-        if (err) {
-          return console.log(err.message);
+    let urlTracker = 21;
+
+    for (var j = 0; j < 5; j++) {
+      let name = color[j];
+      let url = `https://s3.us-east-2.amazonaws.com/sjm-pokemon/${urlTracker}.jpg`;
+      db.run(
+        `INSERT INTO variations ( name, imgUrl, id_options) VALUES(?,?,?)`,
+        [name, url, id],
+        function(err) {
+          if (err) {
+            return console.log(err.message);
+          }
+          // get the last insert id
+          console.log(`A row has been inserted with rowid ${this.lastID}`);
         }
-        // get the last insert id
-        console.log(`A row has been inserted with rowid ${this.lastID}`);
-      }
-    );
+      );
+      urlTracker === 25 ? (urlTracker = 21) : (urlTracker += 1);
+    }
   }
 };
 
 createProducts();
 
 db.serialize(() => {
-  insertPrimaryImages();
   insertProducts();
+  insertPrimaryImages();
+  insertMultiViewPrimaryImages();
+  insertPrimaryImagesForMultiOption();
   insertSelectOptions();
   insertTableOptions();
+  insertSelectVariations();
+  insertTableVariations();
 });
 
 db.close(err => {
