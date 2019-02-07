@@ -14,7 +14,7 @@ DROP TABLE IF EXISTS `products`;
 		
 CREATE TABLE `products` (
   `id` INTEGER PRIMARY KEY AUTOINCREMENT,
-  `name` VARCHAR(100) NULL DEFAULT NULL,
+  `product_name` VARCHAR(100) NULL DEFAULT NULL,
   `company` VARCHAR(50) NULL DEFAULT NULL,
   `catagory` VARCHAR(50) NULL DEFAULT NULL,
   `price` DECIMAL(1000) NULL DEFAULT NULL,
@@ -34,10 +34,10 @@ DROP TABLE IF EXISTS `primary_images`;
 		
 CREATE TABLE `primary_images` (
   `id` INTEGER PRIMARY KEY AUTOINCREMENT,
-  `name` VARCHAR(20) NULL DEFAULT NULL,
+  `image_name` VARCHAR(20) NULL DEFAULT NULL,
   `imgUrl` VARCHAR(100) NULL DEFAULT NULL,
-  `id_product` INTEGER NULL DEFAULT NULL,
-  FOREIGN KEY(id_product) REFERENCES products(id)
+  `id_products` INTEGER NULL DEFAULT NULL,
+  FOREIGN KEY(id_products) REFERENCES products(id)
 );
 
 -- ---
@@ -51,8 +51,8 @@ CREATE TABLE `options` (
   `id` INTEGER PRIMARY KEY AUTOINCREMENT,
   `type` VARCHAR(20) NULL DEFAULT NULL,
   `option_name` VARCHAR(20) NULL DEFAULT NULL,
-  `id_product` INTEGER NULL DEFAULT NULL,
-  FOREIGN KEY(id_product) REFERENCES products(id)
+  `id_products` INTEGER NULL DEFAULT NULL,
+  FOREIGN KEY(id_products) REFERENCES products(id)
 );
 
 -- ---
@@ -64,12 +64,12 @@ DROP TABLE IF EXISTS `variations`;
 		
 CREATE TABLE `variations` (
   `id` INTEGER PRIMARY KEY AUTOINCREMENT,
-  `name` VARCHAR(20) NULL DEFAULT NULL,
+  `var_name` VARCHAR(20) NULL DEFAULT NULL,
   `imgUrl` VARCHAR(100) NULL DEFAULT NULL,
   `id_options` INTEGER NULL DEFAULT NULL,
-  `id_product` INTEGER NULL DEFAULT NULL,
+  `id_products` INTEGER NULL DEFAULT NULL,
   FOREIGN KEY(id_options) REFERENCES options(id)
-  FOREIGN KEY(id_product) REFERENCES products(id)
+  FOREIGN KEY(id_products) REFERENCES products(id)
 );
 
 -- ---

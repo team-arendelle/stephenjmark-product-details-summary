@@ -29,7 +29,7 @@ const createProducts = () => {
 const insertProducts = () => {
   products.forEach(product => {
     db.run(
-      `INSERT INTO products (name, company, catagory, price, stockCount, best_seller, rating, review_count, question_count) VALUES(?,?,?,?,?,?,?,?,?)`,
+      `INSERT INTO products (product_name, company, catagory, price, stockCount, best_seller, rating, review_count, question_count) VALUES(?,?,?,?,?,?,?,?,?)`,
       [
         product.name,
         product.company,
@@ -61,7 +61,7 @@ const insertPrimaryImages = () => {
     imageIndex === 20 ? (imageIndex = 1) : (imageIndex += 1);
 
     db.run(
-      `INSERT INTO primary_images (imgUrl, id_product) VALUES(?,?)`,
+      `INSERT INTO primary_images (imgUrl, id_products) VALUES(?,?)`,
       [url, id],
       function(err) {
         if (err) {
@@ -81,7 +81,7 @@ const insertMultiViewPrimaryImages = () => {
     for (var j = 26; j < 29; j++) {
       let url = `https://s3.us-east-2.amazonaws.com/sjm-pokemon/${j}.jpg`;
       db.run(
-        `INSERT INTO primary_images (imgUrl, id_product) VALUES(?,?)`,
+        `INSERT INTO primary_images (imgUrl, id_products) VALUES(?,?)`,
         [url, id],
         function(err) {
           if (err) {
@@ -101,7 +101,7 @@ const insertPrimaryImagesForMultiOption = () => {
     let id = i;
     let url = `https://s3.us-east-2.amazonaws.com/sjm-pokemon/24.jpg`;
     db.run(
-      `INSERT INTO primary_images (imgUrl, id_product) VALUES(?,?)`,
+      `INSERT INTO primary_images (imgUrl, id_products) VALUES(?,?)`,
       [url, id],
       function(err) {
         if (err) {
@@ -122,7 +122,7 @@ const insertSelectOptions = () => {
     let id = i;
 
     db.run(
-      `INSERT INTO options (type, option_name, id_product) VALUES(?,?,?)`,
+      `INSERT INTO options (type, option_name, id_products) VALUES(?,?,?)`,
       [type, name, id],
       function(err) {
         if (err) {
@@ -143,7 +143,7 @@ const insertTableOptions = () => {
     let id = i;
 
     db.run(
-      `INSERT INTO options (type, option_name, id_product) VALUES(?,?,?)`,
+      `INSERT INTO options (type, option_name, id_products) VALUES(?,?,?)`,
       [type, name, id],
       function(err) {
         if (err) {
@@ -165,7 +165,7 @@ const insertSelectVariations = () => {
     for (var j = 0; j < 3; j++) {
       let name = sizes[j];
       db.run(
-        `INSERT INTO variations ( name, id_options) VALUES(?,?)`,
+        `INSERT INTO variations ( var_name, id_options) VALUES(?,?)`,
         [name, id],
         function(err) {
           if (err) {
@@ -182,7 +182,7 @@ const insertSelectVariations = () => {
 //insert color variations for select options
 const insertTableVariations = () => {
   let color = ["yellow", "blue", "red", "brown", "green"];
-  for (var i = 6; i <= 15; i++) {
+  for (var i = 11; i <= 20; i++) {
     let id = i;
 
     let urlTracker = 21;
@@ -191,7 +191,7 @@ const insertTableVariations = () => {
       let name = color[j];
       let url = `https://s3.us-east-2.amazonaws.com/sjm-pokemon/${urlTracker}.jpg`;
       db.run(
-        `INSERT INTO variations ( name, imgUrl, id_options) VALUES(?,?,?)`,
+        `INSERT INTO variations ( var_name, imgUrl, id_options) VALUES(?,?,?)`,
         [name, url, id],
         function(err) {
           if (err) {
