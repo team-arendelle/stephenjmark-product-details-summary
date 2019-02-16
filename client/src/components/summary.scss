@@ -1,0 +1,38 @@
+$border-color: #dddddd;
+
+$font-color: #111111;
+$base-font-family: sans-serif;
+$base-heading-font-family: $base-font-family;
+
+.summary {
+  flex-grow: 1;
+  padding: 1em;
+  min-width: 200px;
+  font-family: $base-font-family;
+}
+
+.name {
+  font-size: large;
+  font-weight: bold;
+}
+
+.company {
+  font-size: medium;
+}
+
+.price {
+  font-size: medium;
+}
+
+.priceNumber {
+  font-size: large;
+  color: #b12704;
+}
+
+.bullets {
+  font-size: small;
+  font-weight: normal;
+  line-height: 1.5;
+  list-style-position: initial;
+  padding-left: 12px;
+}

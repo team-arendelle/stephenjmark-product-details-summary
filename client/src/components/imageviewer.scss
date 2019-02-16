@@ -1,0 +1,19 @@
+.imageviewer {
+  flex-grow: 2;
+  min-width: 400px;
+  padding: 1em;
+  display: flex;
+}
+
+.mainimage {
+  flex: 0 1 auto;
+  padding: 1em;
+  width: 100%;
+  object-fit: contain;
+}
+
+.visualselector {
+  list-style: none;
+  padding-left: 0px;
+  margin-left: 0px;
+}

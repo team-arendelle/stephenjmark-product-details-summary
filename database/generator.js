@@ -5,10 +5,9 @@ let products = [];
 
 //create 100 product objects
 const createProducts = () => {
-  let long =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod";
-  let medium = "Lorem ipsum dolor sit amet";
-  let short = "Lorem ipsum";
+  let long = "Lorem Ipsum Dolor Sit";
+  let medium = "Dolor Sitamet";
+  let short = "Ipsum";
 
   for (let i = 0; i < 100; i++) {
     let product = {};

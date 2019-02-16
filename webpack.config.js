@@ -5,7 +5,7 @@ const PORT = 8000;
 
 module.exports = {
   mode: "development",
-  entry: [`${SRC_DIR}/app.js`],
+  entry: [`${SRC_DIR}/index.jsx`],
   output: {
     filename: "bundle.js",
     path: path.join(__dirname, "public")
@@ -48,6 +48,7 @@ module.exports = {
   devtool: "inline-sourcemap",
   target: "web",
   devServer: {
+    proxy: { "/api": "http://localhost:3000" },
     port: process.env.PORT || PORT,
     compress: true,
     contentBase: path.join(__dirname, "./public")
