@@ -9,6 +9,7 @@ $base-heading-font-family: $base-font-family;
   padding: 1em;
   min-width: 200px;
   font-family: $base-font-family;
+  font-size: small;
 }
 
 .name {
@@ -20,8 +21,9 @@ $base-heading-font-family: $base-font-family;
   font-size: medium;
 }
 
-.price {
-  font-size: medium;
+.summaryitem {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .priceNumber {
@@ -34,5 +36,112 @@ $base-heading-font-family: $base-font-family;
   font-weight: normal;
   line-height: 1.5;
   list-style-position: initial;
-  padding-left: 12px;
+  padding-left: 13px;
+}
+.rating0_1 {
+  padding: 0px;
+  margin: 0px;
+  background: url(https://s3.us-east-2.amazonaws.com/sjm-pokemon/stars/0_1.jpg)
+    no-repeat top left;
+  display: inline-block;
+  height: 15px;
+  width: 79px;
+}
+.rating1 {
+  padding: 0px;
+  margin: 0px;
+  background: url(https://s3.us-east-2.amazonaws.com/sjm-pokemon/stars/1.jpg)
+    no-repeat top left;
+  display: inline-block;
+  height: 15px;
+  width: 79px;
+}
+
+.rating1_2 {
+  padding: 0px;
+  margin: 0px;
+  background: url(https://s3.us-east-2.amazonaws.com/sjm-pokemon/stars/1_2.jpg)
+    no-repeat top left;
+  display: inline-block;
+  height: 15px;
+  width: 79px;
+}
+
+.rating2 {
+  padding: 0px;
+  margin: 0px;
+  background: url(https://s3.us-east-2.amazonaws.com/sjm-pokemon/stars/2.jpg)
+    no-repeat top left;
+  display: inline-block;
+  height: 15px;
+  width: 79px;
+}
+
+.rating2_3 {
+  padding: 0px;
+  margin: 0px;
+  background: url(https://s3.us-east-2.amazonaws.com/sjm-pokemon/stars/2_3.jpg)
+    no-repeat top left;
+  display: inline-block;
+  height: 15px;
+  width: 79px;
+}
+
+.rating3 {
+  padding: 0px;
+  margin: 0px;
+  background: url(https://s3.us-east-2.amazonaws.com/sjm-pokemon/stars/3.jpg)
+    no-repeat top left;
+  display: inline-block;
+  height: 15px;
+  width: 79px;
+}
+
+.rating3_4 {
+  padding: 0px;
+  margin: 0px;
+  background: url(https://s3.us-east-2.amazonaws.com/sjm-pokemon/stars/3_4.jpg)
+    no-repeat top left;
+  display: inline-block;
+  height: 15px;
+  width: 79px;
+}
+
+.rating4 {
+  padding: 0px;
+  margin: 0px;
+  background: url(https://s3.us-east-2.amazonaws.com/sjm-pokemon/stars/4.jpg)
+    no-repeat top left;
+  display: inline-block;
+  height: 15px;
+  width: 79px;
+}
+
+.rating4_5 {
+  padding: 0px;
+  margin: 0px;
+  background: url(https://s3.us-east-2.amazonaws.com/sjm-pokemon/stars/4_5.jpg)
+    no-repeat top left;
+  display: inline-block;
+  height: 15px;
+  width: 79px;
+}
+.rating5 {
+  padding: 0px;
+  margin: 0px;
+  background: url(https://s3.us-east-2.amazonaws.com/sjm-pokemon/stars/5.jpg)
+    no-repeat top left;
+  display: inline-block;
+  height: 15px;
+  width: 79px;
+}
+
+.bestseller {
+  padding: 0px;
+  margin: 0px;
+  background: url(https://s3.us-east-2.amazonaws.com/sjm-pokemon/bestseller.jpg)
+    no-repeat top left;
+  display: inline-block;
+  height: 19px;
+  width: 92px;
 }

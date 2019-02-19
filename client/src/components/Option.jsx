@@ -22,8 +22,9 @@ class Option extends React.Component {
   renderSelect() {
     return (
       <div>
-        <div>{this.props.optionName}: </div>
-        <select>
+        <div className={styles.summaryitem}>{this.props.optionName}: </div>
+        <select className={styles.dropdown}>
+          <option value="">Select</option>
           {this.props.options.map(option => {
             let value = option.var_name;
             return <option value={value}>{value}</option>;
@@ -36,8 +37,9 @@ class Option extends React.Component {
   renderTable() {
     return (
       <div>
-        <div>
-          {this.props.optionName}: {this.state.selected}{" "}
+        <div className={styles.summaryitem}>
+          {this.props.optionName}:{" "}
+          <span className={styles.variationname}>{this.state.selected} </span>
         </div>
         <ul className={styles.visualselector}>
           {this.props.options.map(option => {
