@@ -63,7 +63,7 @@ class Summary extends React.Component {
           swapImage={this.props.swapImage}
         />
         <div id="feature_bullets">
-          <ul className={styles.bullets}>
+          <ul className={`${styles.bullets} `}>
             <li>
               Gift Box and Tools Package,Rimable Plastic Cruiser Fully Assembled
               22'' Long x 6''

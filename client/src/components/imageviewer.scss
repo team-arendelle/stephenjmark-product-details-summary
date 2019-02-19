@@ -1,14 +1,18 @@
 .imageviewer {
   flex-grow: 2;
+  width: 100%;
   min-width: 400px;
+  max-width: 800px;
   display: flex;
+}
+.mainimagecontainer {
+  padding: 1em;
+  width: 100%;
 }
 
 .mainimage {
-  flex: 0 1 auto;
-  padding: 1em;
-  width: 100%;
-  object-fit: contain;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 .visualselector {

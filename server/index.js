@@ -12,7 +12,7 @@ app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 
 //serve up static files
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, "../public")));
 
 app.get("/", (req, res) => {
   res.send("hello");

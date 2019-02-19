@@ -1,6 +1,7 @@
 import React from "react";
 import ImageButton from "./ImageButton";
 import styles from "./imageviewer.scss";
+import ReactImageMagnify from "react-image-magnify";
 
 class ImageViewer extends React.Component {
   constructor(props) {
@@ -24,7 +25,28 @@ class ImageViewer extends React.Component {
             );
           })}
         </ul>
-        <img className={styles.mainimage} src={this.props.mainImage} />
+        <div className={styles.mainimagecontainer}>
+          {/* <img className={styles.mainimage} src={this.props.mainImage} /> */}
+          <ReactImageMagnify
+            className={styles.mainimage}
+            {...{
+              smallImage: {
+                isFluidWidth: true,
+                src: this.props.mainImage
+              },
+              largeImage: {
+                src: this.props.mainImage,
+                width: 1200,
+                height: 1800
+              },
+              enlargedImageContainerDimensions: {
+                width: "100%",
+                height: "100%"
+              },
+              shouldUsePositiveSpaceLens: true
+            }}
+          />
+        </div>
       </div>
     );
   }
