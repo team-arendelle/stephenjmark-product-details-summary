@@ -11,11 +11,7 @@ const port = 3000;
 app.use(morgan("dev"));
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
-app.use(
-  cors({
-    origin: "http://localhost:3001"
-  })
-);
+app.use(cors());
 
 //serve up static files
 app.use(express.static(path.join(__dirname, "../public")));
