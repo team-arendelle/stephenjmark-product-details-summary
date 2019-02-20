@@ -9,7 +9,7 @@ class ProductDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productId: 7,
+      productId: 5,
       product: null,
       colorOptions: null,
       sizeOptions: null,
@@ -24,7 +24,7 @@ class ProductDetails extends React.Component {
 
   getProductInformation() {
     axios
-      .get(`/api/products/${this.state.productId}/`)
+      .get(`http://localhost:3000/api/products/${this.state.productId}/`)
       .then(({ data }) => {
         this.setState({ product: data });
         this.setState({ images: data.primary_images });

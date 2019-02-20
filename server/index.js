@@ -3,6 +3,7 @@ const parser = require("body-parser");
 const morgan = require("morgan");
 const router = require("./router.js");
 const path = require("path");
+const cors = require("cors");
 const app = express();
 const port = 3000;
 
@@ -10,12 +11,21 @@ const port = 3000;
 app.use(morgan("dev"));
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
+app.use(
+  cors({
+    origin: "http://localhost:3001"
+  })
+);
 
 //serve up static files
 app.use(express.static(path.join(__dirname, "../public")));
 
 app.get("/", (req, res) => {
   res.send("hello");
+});
+
+app.get("/bundle", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/bundle.js"));
 });
 
 app.use("/api", router);

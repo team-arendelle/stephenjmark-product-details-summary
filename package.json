@@ -1,19 +1,20 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
+  "name": "proxy",
+  "description": "AMAZONAS",
+  "author": "Stephen Mark",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
     "dev": "webpack-dev-server",
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "morgan": "^1.9.1",
     "react": "^16.7.0",
@@ -29,7 +30,7 @@
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
     "eslint": "^5.13.0",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
     "eslint-watch": "^4.0.2",
     "faker": "^4.1.0",
     "jest": "^24.1.0",
@@ -43,5 +44,18 @@
     "webpack": "^4.29.1",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14"
-  }
+  },
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenjmark/hrnyc20-front-end-capstone.git"
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "bugs": {
+    "url": "https://github.com/stephenjmark/hrnyc20-front-end-capstone/issues"
+  },
+  "homepage": "https://github.com/stephenjmark/hrnyc20-front-end-capstone#readme"
 }
