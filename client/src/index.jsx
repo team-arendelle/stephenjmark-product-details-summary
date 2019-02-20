@@ -24,7 +24,7 @@ class ProductDetails extends React.Component {
 
   getProductInformation() {
     axios
-      .get(`http://localhost:3000/api/products/${this.state.productId}/`)
+      .get(`/api/products/${this.state.productId}/`)
       .then(({ data }) => {
         this.setState({ product: data });
         this.setState({ images: data.primary_images });
