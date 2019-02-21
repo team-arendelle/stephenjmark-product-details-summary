@@ -26,7 +26,7 @@ class ProductDetails extends React.Component {
   getProductInformation() {
     axios
       .get(
-        `ec2-18-220-184-68.us-east-2.compute.amazonaws.com/api/products/${
+        `http://ec2-18-220-184-68.us-east-2.compute.amazonaws.com/bundle/api/products/${
           this.state.productId
         }/`
         // `api/products/${this.state.productId}/`
