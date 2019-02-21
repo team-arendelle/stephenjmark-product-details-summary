@@ -4,6 +4,8 @@ $font-color: #111111;
 $base-font-family: sans-serif;
 $base-heading-font-family: $base-font-family;
 $amazon-sprite: url("https://s3.us-east-2.amazonaws.com/sjm-pokemon/amazonsprite.png");
+$amazon-best-seller: url("https://s3.us-east-2.amazonaws.com/sjm-pokemon/bestseller.png");
+
 .summary {
   flex-grow: 2;
   padding: 1em;
@@ -216,7 +218,7 @@ $amazon-sprite: url("https://s3.us-east-2.amazonaws.com/sjm-pokemon/amazonsprite
   padding: 0px;
   padding-top: 5px;
   margin: 0px;
-  background: url("/bestseller.png") no-repeat top left;
+  background: $amazon-best-seller no-repeat top left;
   display: inline-block;
   background-size: 92px 19px;
   height: 19px;
