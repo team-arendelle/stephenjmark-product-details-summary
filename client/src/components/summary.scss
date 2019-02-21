@@ -3,8 +3,8 @@ $border-color: #dddddd;
 $font-color: #111111;
 $base-font-family: sans-serif;
 $base-heading-font-family: $base-font-family;
-
-.summary {
+$amazon-sprite: url("https://s3.us-east-2.amazonaws.com/sjm-pokemon/amazonsprite.png")
+  .summary {
   flex-grow: 2;
   padding: 1em;
   min-width: 200px;
@@ -42,7 +42,7 @@ $base-heading-font-family: $base-font-family;
 .rating0 {
   padding: 0px;
   margin: 0px;
-  background: url("/amazonsprite.png") no-repeat top left;
+  background: $amazon-sprite no-repeat top left;
   background-position-x: -255px;
   background-position-y: -370px;
   -webkit-background-size: 400px 900px;
@@ -57,7 +57,7 @@ $base-heading-font-family: $base-font-family;
 .rating0_1 {
   padding: 0px;
   margin: 0px;
-  background: url("/amazonsprite.png") no-repeat top left;
+  background: $amazon-sprite no-repeat top left;
   background-position-x: -238px;
   background-position-y: -370px;
   -webkit-background-size: 400px 900px;
@@ -88,7 +88,7 @@ $base-heading-font-family: $base-font-family;
 .rating1_2 {
   padding: 0px;
   margin: 0px;
-  background: url("/amazonsprite.png") no-repeat top left;
+  background: $amazon-sprite no-repeat top left;
   background-position-x: -222px;
   background-position-y: -370px;
   -webkit-background-size: 400px 900px;
@@ -104,7 +104,7 @@ $base-heading-font-family: $base-font-family;
 .rating2 {
   padding: 0px;
   margin: 0px;
-  background: url("/amazonsprite.png") no-repeat top left;
+  background: $amazon-sprite no-repeat top left;
   background-position-x: -53px;
   background-position-y: -370px;
   -webkit-background-size: 400px 900px;
@@ -120,7 +120,7 @@ $base-heading-font-family: $base-font-family;
 .rating2_3 {
   padding: 0px;
   margin: 0px;
-  background: url("/amazonsprite.png") no-repeat top left;
+  background: $amazon-sprite no-repeat top left;
   background-position-x: -207px;
   background-position-y: -370px;
   -webkit-background-size: 400px 900px;
@@ -136,7 +136,7 @@ $base-heading-font-family: $base-font-family;
 .rating3 {
   padding: 0px;
   margin: 0px;
-  background: url("/amazonsprite.png") no-repeat top left;
+  background: $amazon-sprite no-repeat top left;
   background-position-x: -37px;
   background-position-y: -370px;
   -webkit-background-size: 400px 900px;
@@ -152,7 +152,7 @@ $base-heading-font-family: $base-font-family;
 .rating3_4 {
   padding: 0px;
   margin: 0px;
-  background: url("/amazonsprite.png") no-repeat top left;
+  background: $amazon-sprite no-repeat top left;
   background-position-x: -191px;
   background-position-y: -370px;
   -webkit-background-size: 400px 900px;
@@ -168,7 +168,7 @@ $base-heading-font-family: $base-font-family;
 .rating4 {
   padding: 0px;
   margin: 0px;
-  background: url("/amazonsprite.png") no-repeat top left;
+  background: $amazon-sprite no-repeat top left;
   background-position-x: -21px;
   background-position-y: -370px;
   -webkit-background-size: 400px 900px;
@@ -184,7 +184,7 @@ $base-heading-font-family: $base-font-family;
 .rating4_5 {
   padding: 0px;
   margin: 0px;
-  background: url("/amazonsprite.png") no-repeat top left;
+  background: $amazon-sprite no-repeat top left;
   background-position-x: -175px;
   background-position-y: -370px;
   -webkit-background-size: 400px 900px;
@@ -199,7 +199,7 @@ $base-heading-font-family: $base-font-family;
 .rating5 {
   padding: 0px;
   margin: 0px;
-  background: url("/amazonsprite.png") no-repeat top left;
+  background: $amazon-sprite no-repeat top left;
   background-position-x: -5px;
   background-position-y: -370px;
   -webkit-background-size: 400px 900px;
