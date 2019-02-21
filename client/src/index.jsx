@@ -10,7 +10,7 @@ class ProductDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productId: this.props.match.params.id,
+      productId: this.props.match.params.id || 5,
       product: null,
       colorOptions: null,
       sizeOptions: null,
