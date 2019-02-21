@@ -15,22 +15,34 @@ class BuyingOptions extends React.Component {
 
   getColorOptions() {
     axios
-      .get(`/api/products/${this.props.id}/colors`)
+      .get(
+        `http://ec2-18-220-184-68.us-east-2.compute.amazonaws.com/api/products/${
+          this.props.id
+        }/colors`
+      )
       .then(({ data }) => {
         data.length > 0 ? this.setState({ colorOptions: data }) : "";
       })
-      .catch();
+      .catch(err => {
+        console.log(err);
+      });
   }
   getSizeOptions() {
     let id = this.props.id;
     console.log(id);
     axios
-      .get(`/api/products/${this.props.id}/size`)
+      .get(
+        `http://ec2-18-220-184-68.us-east-2.compute.amazonaws.com/api/products/${
+          this.props.id
+        }/size`
+      )
       .then(({ data }) => {
         console.log(data);
         data.length > 0 ? this.setState({ sizeOptions: data }) : "";
       })
-      .catch();
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   componentDidMount() {

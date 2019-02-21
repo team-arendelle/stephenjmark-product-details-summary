@@ -37,9 +37,7 @@ class ProductDetails extends React.Component {
           mainImage: this.state.images[0]
         });
       })
-      .catch(err => {
-        console.log(err);
-      });
+      .catch();
   }
 
   componentDidMount() {
