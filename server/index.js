@@ -32,7 +32,3 @@ app.listen(port, err => {
   }
   console.log(`Listening on ${port}`);
 });
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
-});

@@ -32,11 +32,15 @@ class ProductDetails extends React.Component {
         // `api/products/${this.state.productId}/`
       )
       .then(({ data }) => {
-        this.setState({ product: data });
-        this.setState({ images: data.primary_images });
-        this.setState({ mainImage: this.state.images[0] });
+        this.setState({
+          product: data,
+          images: data.primary_images,
+          mainImage: this.state.images[0]
+        });
       })
-      .catch();
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   componentDidMount() {
