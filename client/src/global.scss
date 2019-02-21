@@ -1,5 +1,5 @@
 $font-color: #111111;
-$base-font-family: Helvetica, arial, sans-serif;
+$base-font-family: arial, sans-serif;
 $base-heading-font-family: $base-font-family;
 
 *,
@@ -58,8 +58,9 @@ a:hover {
 
 .container {
   display: flex;
-  width: 83%;
+  width: 100%;
   min-width: 600px;
+  max-width: 1275px;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;

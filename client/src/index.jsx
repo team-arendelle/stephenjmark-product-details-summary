@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from "axios";
 import ImageViewer from "./components/ImageViewer";
 import Summary from "./components/Summary";
@@ -9,7 +10,7 @@ class ProductDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productId: 5,
+      productId: this.props.match.params.id,
       product: null,
       colorOptions: null,
       sizeOptions: null,
@@ -25,9 +26,10 @@ class ProductDetails extends React.Component {
   getProductInformation() {
     axios
       .get(
-        `http://ec2-18-224-71-78.us-east-2.compute.amazonaws.com/api/products/${
-          this.state.productId
-        }/`
+        // `http://ec2-18-224-71-78.us-east-2.compute.amazonaws.com/api/products/${
+        //   this.state.productId
+        // }/`
+        `api/products/${this.state.productId}/`
       )
       .then(({ data }) => {
         this.setState({ product: data });
@@ -80,4 +82,9 @@ class ProductDetails extends React.Component {
   }
 }
 
-ReactDOM.render(<ProductDetails />, document.getElementById("productDetails"));
+ReactDOM.render(
+  <Router>
+    <Route exact path="/:id" component={ProductDetails} />
+  </Router>,
+  document.getElementById("productDetails")
+);
