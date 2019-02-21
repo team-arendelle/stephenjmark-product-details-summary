@@ -3,8 +3,8 @@ $border-color: #dddddd;
 $font-color: #111111;
 $base-font-family: sans-serif;
 $base-heading-font-family: $base-font-family;
-$amazon-sprite: url("https://s3.us-east-2.amazonaws.com/sjm-pokemon/amazonsprite.png")
-  .summary {
+$amazon-sprite: url("https://s3.us-east-2.amazonaws.com/sjm-pokemon/amazonsprite.png");
+.summary {
   flex-grow: 2;
   padding: 1em;
   min-width: 200px;
