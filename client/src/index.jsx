@@ -26,10 +26,10 @@ class ProductDetails extends React.Component {
   getProductInformation() {
     axios
       .get(
-        // `http://ec2-18-224-71-78.us-east-2.compute.amazonaws.com/api/products/${
-        //   this.state.productId
-        // }/`
-        `api/products/${this.state.productId}/`
+        `http://ec2-18-224-71-78.us-east-2.compute.amazonaws.com/api/products/${
+          this.state.productId
+        }/`
+        // `api/products/${this.state.productId}/`
       )
       .then(({ data }) => {
         this.setState({ product: data });
