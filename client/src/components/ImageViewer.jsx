@@ -31,25 +31,28 @@ class ImageViewer extends React.Component {
         </ul>
         <div className={styles.mainimagecontainer}>
           {/* <img className={styles.mainimage} src={this.props.mainImage} /> */}
-          <ReactImageMagnify
-            className={styles.mainimage}
-            {...{
-              smallImage: {
-                isFluidWidth: true,
-                src: this.props.mainImage
-              },
-              largeImage: {
-                src: this.props.mainImage,
-                width: 1200,
-                height: 1800
-              },
-              enlargedImageContainerDimensions: {
-                width: "100%",
-                height: "100%"
-              },
-              shouldUsePositiveSpaceLens: true
-            }}
-          />
+
+          <div className={styles.mainimagewrapper}>
+            <ReactImageMagnify
+              className={styles.mainimage}
+              {...{
+                smallImage: {
+                  isFluidWidth: true,
+                  src: this.props.mainImage
+                },
+                largeImage: {
+                  src: this.props.mainImage,
+                  width: 1200,
+                  height: 1800
+                },
+                enlargedImageContainerDimensions: {
+                  width: "100%",
+                  height: "100%"
+                },
+                shouldUsePositiveSpaceLens: true
+              }}
+            />
+          </div>
         </div>
       </div>
     );
