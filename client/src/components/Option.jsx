@@ -49,6 +49,7 @@ class Option extends React.Component {
                 handleHover={this.swapImage}
                 image={option.imgUrl}
                 value={value}
+                key={""}
               />
             );
           })}

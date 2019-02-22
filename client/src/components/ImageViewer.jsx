@@ -21,7 +21,11 @@ class ImageViewer extends React.Component {
         <ul className={styles.visualselector}>
           {this.props.images.map(image => {
             return (
-              <ImageButton handleHover={this.props.swapImage} image={image} />
+              <ImageButton
+                handleHover={this.props.swapImage}
+                image={image}
+                key={""}
+              />
             );
           })}
         </ul>
