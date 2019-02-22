@@ -17,6 +17,7 @@ $amazon-best-seller: url("https://s3.us-east-2.amazonaws.com/sjm-pokemon/bestsel
 .name {
   font-size: large;
   font-weight: bold;
+  padding-bottom: 5px;
 }
 
 .company {
@@ -26,6 +27,7 @@ $amazon-best-seller: url("https://s3.us-east-2.amazonaws.com/sjm-pokemon/bestsel
 .summaryitem {
   font-size: 14px;
   line-height: 1.5;
+  padding-bottom: 1em;
 }
 
 .priceNumber {

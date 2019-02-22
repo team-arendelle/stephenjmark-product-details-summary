@@ -8,11 +8,14 @@
 .mainimagecontainer {
   padding: 1em;
   width: 100%;
+  position: relative;
 }
 
 .mainimage {
   max-width: 100%;
   min-width: 100%;
+  position: absolute;
+  z-index: 99999;
 }
 
 .visualselector {
