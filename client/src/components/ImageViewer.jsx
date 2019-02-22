@@ -19,12 +19,12 @@ class ImageViewer extends React.Component {
     return (
       <div className={styles.imageviewer}>
         <ul className={styles.visualselector}>
-          {this.props.images.map(image => {
+          {this.props.images.map((image, index) => {
             return (
               <ImageButton
                 handleHover={this.props.swapImage}
                 image={image}
-                key={""}
+                key={index}
               />
             );
           })}

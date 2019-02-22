@@ -42,14 +42,14 @@ class Option extends React.Component {
           <span className={styles.variationname}>{this.state.selected} </span>
         </div>
         <ul className={styles.visualselector}>
-          {this.props.options.map(option => {
+          {this.props.options.map((option, index) => {
             let value = option.var_name;
             return (
               <ImageButton
                 handleHover={this.swapImage}
                 image={option.imgUrl}
                 value={value}
-                key={""}
+                key={index}
               />
             );
           })}
