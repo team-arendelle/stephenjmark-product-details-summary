@@ -15,7 +15,16 @@
   max-width: 100%;
   min-width: 100%;
   position: absolute;
-  z-index: 99999;
+}
+.mainimage + div {
+  z-index: 9999;
+}
+
+.mainimagewrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .visualselector {
