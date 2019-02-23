@@ -32,7 +32,15 @@ class Summary extends React.Component {
         </div>{" "}
         <br />
         <div>
-          <span className={this.getStars()} />{" "}
+          <span className={`${styles.stars} ${this.getStars()}`}>
+            <div className={styles.starspopup}>
+              {this.props.product.rating} out of 5 stars
+              <br />
+              <a href="#reviews">
+                See all {this.props.product.review_count} reviews
+              </a>
+            </div>
+          </span>{" "}
           <a href="#reviews">
             {this.props.product.review_count} customer reviews
           </a>{" "}

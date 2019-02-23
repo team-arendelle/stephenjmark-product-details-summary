@@ -43,6 +43,31 @@ $amazon-best-seller: url("https://s3.us-east-2.amazonaws.com/sjm-pokemon/bestsel
   padding-left: 13px;
 }
 
+.stars {
+  position: relative;
+}
+
+.stars:hover div {
+  display: block;
+  transition: all 0.5s ease-in;
+}
+
+.starspopup {
+  font-size: 1.1em;
+  text-align: center;
+  line-height: 2em;
+  position: absolute;
+  padding: 48px 0px 34px 0px;
+  width: 200px;
+  height: 165px;
+  top: 19px;
+  left: -73px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+  display: none;
+}
+
 .rating0 {
   padding: 0px;
   margin: 0px;

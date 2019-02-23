@@ -1,16 +1,20 @@
 .imagebutton {
-  max-width: 40px;
+  max-width: 42px;
   border-style: solid;
   border-width: 1px;
   margin: 3px;
+  padding: 1px;
+  overflow: hidden;
 }
 
 .imagebuttonhover {
-  max-width: 40px;
+  max-width: 42px;
+  margin: 3px;
+  padding: 1px;
+  overflow: hidden;
   border: 1px solid black;
   outline: none;
   box-shadow: 0 0 10px #ff6600;
-  margin: 3px;
 }
 
 .imagebuttonselected {
