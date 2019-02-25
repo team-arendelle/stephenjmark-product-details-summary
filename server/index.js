@@ -13,7 +13,7 @@ app.use(morgan("dev"));
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 app.use(cors());
-app.use(compression);
+app.use(compression());
 
 //serve up static files
 app.use(express.static(path.join(__dirname, "../public")));
