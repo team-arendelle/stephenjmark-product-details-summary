@@ -27,10 +27,7 @@ class Summary extends React.Component {
     return (
       <div className={styles.summary}>
         <h3 className={styles.name}>{this.props.product.product_name}</h3>
-        <div className={styles.company}>
-          by {this.props.product.company}
-        </div>{" "}
-        <br />
+        <a className={styles.company}>by {this.props.product.company}</a> <br />
         <div>
           <span className={`${styles.stars} ${this.getStars()}`}>
             <div className={styles.starspopup}>

@@ -34,7 +34,8 @@ class ProductDetails extends React.Component {
         this.setState({
           product: data,
           images: data.primary_images,
-          mainImage: data.primary_images[0]
+          mainImage: data.primary_images[0],
+          ratings: { total: 1000, 5: 555, 4: 270, 3: 54, 2: 100, 1: 21 }
         });
       })
       .catch();

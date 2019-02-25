@@ -4,6 +4,7 @@ const morgan = require("morgan");
 const router = require("./router.js");
 const path = require("path");
 const cors = require("cors");
+const compression = require("compression");
 const app = express();
 const port = 3000;
 
@@ -12,6 +13,7 @@ app.use(morgan("dev"));
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 app.use(cors());
+app.use(compression);
 
 //serve up static files
 app.use(express.static(path.join(__dirname, "../public")));
