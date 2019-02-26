@@ -15,7 +15,21 @@ AMAZONAS
 
 ## Usage
 
-> Some usage instructions
+# install dependencies
+npm install
+
+# create the database
+npm run database
+
+# seed the database
+npm run seed
+
+# run webpack to build client bundle
+npm run react-dev
+
+# run the server locally
+npm run start
+
 
 ## Requirements
 
@@ -24,6 +38,7 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 - Node v10.15.0
 - npm
 - JS ES6
+-sqlite3
 -Webpack
 -Webpack-dev-server
 -React
