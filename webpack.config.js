@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+const CompressionPlugin = require("compression-webpack-plugin");
 const path = require("path");
 const SRC_DIR = path.join(__dirname, "./client/src");
 const PORT = 8000;
@@ -52,5 +53,6 @@ module.exports = {
     port: process.env.PORT || PORT,
     compress: true,
     contentBase: path.join(__dirname, "./public")
-  }
+  },
+  plugins: [new CompressionPlugin()]
 };

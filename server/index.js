@@ -15,6 +15,13 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(compression());
 
+app.get("*.js", (req, res, next) => {
+  console.log("js requested");
+  req.url = req.url + ".gz";
+  res.set("Content-Encoding", "gzip");
+  next();
+});
+
 //serve up static files
 app.use(express.static(path.join(__dirname, "../public")));
 
