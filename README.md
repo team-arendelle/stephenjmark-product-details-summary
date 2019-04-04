@@ -1,61 +1,43 @@
-# Project Name
+# amazonas/product-summary
 
-AMAZONAS
+An Amazon inspired product summary component for displaying essential information such as name, company, price, and rating. The component is  equipped to show multiple image views with hover-over zoom capability, as well as flexbily render buying options with varying styles of user input. 
+
+![](https://github.com/team-arendelle/product-summary/blob/master/product-summary.gif)
 
 ## Related Projects
 
-  - https://github.com/team-arendelle/vinnyA3-add-to-cart
-  - https://github.com/team-arendelle/RossHathaway-reviews
+- https://github.com/team-arendelle/vinnyA3-add-to-cart
+- https://github.com/team-arendelle/RossHathaway-reviews
 
 ## Table of Contents
 
 1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+2. [Requirements](#requirements)
+3. [Development](#development)
 
 ## Usage
 
 # install dependencies
+
 npm install
 
-# create the database
-npm run database
+# build bundle
 
-# seed the database
-npm run seed
-
-# run webpack to build client bundle
-npm run react-dev
+npm run build-prod
 
 # run the server locally
-npm run start
 
+node ./server/index.js
 
 ## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node v10.15.0
 - npm
 - JS ES6
--sqlite3
--Webpack
--Webpack-dev-server
--React
--Sass
--Bootstrap
--SQLite
-
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-
-npm install -g webpack
-npm install
-```
+- Webpack
+- Webpack-dev-server
+- React
+- Sass
+- Bootstrap
+- SQLite
 
