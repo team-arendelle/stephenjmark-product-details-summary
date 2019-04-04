@@ -8,9 +8,9 @@
   },
   "scripts": {
     "dev": "webpack-dev-server",
-    "test": "jest",
+    "start": "node ./server/index.js",
     "build": "webpack",
-    "prod": "webpack -p --mode production",
+    "build-prod": "webpack -p --mode production",
     "database": "sqlite3 ./database/amazon.db < ./database/schema.sql",
     "seed": "node ./database/generator.js"
   },
