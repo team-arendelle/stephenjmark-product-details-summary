@@ -1,13 +1,14 @@
 # amazonas/product-summary
 
-An Amazon inspired product summary component for displaying essential information such as name, company, price, and rating. The component is  equipped to show multiple image views with hover-over zoom capability, as well as flexibily render buying options with varying styles of user input. 
+An Amazon inspired product summary component for displaying essential product information such as name, company, price, and rating. The component is  equipped to show multiple image views with hover-over zoom capability, as well as flexibily render buying options with varying styles of user input. 
+
+## Features
+ 
+ - Dynamically renders a variety of buying options based on the type of product
+ - Hovering over image selectors dynamically swaps the main image
+ - Zoom modal appears upon hovering over main image
 
 ![](https://github.com/team-arendelle/product-summary/blob/master/product-summary.gif)
-
-## Related Projects
-
-- https://github.com/team-arendelle/vinnyA3-add-to-cart
-- https://github.com/team-arendelle/RossHathaway-reviews
 
 ## Table of Contents
 
@@ -17,15 +18,15 @@ An Amazon inspired product summary component for displaying essential informatio
 
 ## Usage
 
-# install dependencies
+### Install Dependencies
 
 npm install
 
-# build bundle
+### Build Bundle
 
 npm run build-prod
 
-# run the server locally
+### Run Server Locally
 
 node ./server/index.js
 
@@ -40,4 +41,9 @@ node ./server/index.js
 - Sass
 - Bootstrap
 - SQLite
+
+## Related Projects
+
+- https://github.com/team-arendelle/vinnyA3-add-to-cart
+- https://github.com/team-arendelle/RossHathaway-reviews
 
