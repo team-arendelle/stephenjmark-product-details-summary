@@ -2,7 +2,7 @@
 
 An Amazon inspired product summary component for displaying essential product information such as name, company, price, and rating. The component is  equipped to show multiple image views with hover-over zoom capability, as well as flexibily render buying options with varying styles of user input. 
 
-## Features
+### Features
  
  - Dynamically renders a variety of Buying Options based on the type of product
  - Hovering over image selectors dynamically swaps the main image
@@ -11,11 +11,7 @@ An Amazon inspired product summary component for displaying essential product in
 
 ![](https://github.com/team-arendelle/product-summary/blob/master/product-summary.gif)
 
-## Table of Contents
-
-1. [Usage](#Usage)
-2. [Requirements](#requirements)
-3. [Development](#development)
+# Technical Information
 
 ## Usage
 
