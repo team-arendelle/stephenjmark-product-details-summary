@@ -4,9 +4,10 @@ An Amazon inspired product summary component for displaying essential product in
 
 ## Features
  
- - Dynamically renders a variety of buying options based on the type of product
+ - Dynamically renders a variety of Buying Options based on the type of product
  - Hovering over image selectors dynamically swaps the main image
  - Zoom modal appears upon hovering over main image
+ - Ratings modal appears when hovering over stars
 
 ![](https://github.com/team-arendelle/product-summary/blob/master/product-summary.gif)
 
@@ -39,7 +40,6 @@ node ./server/index.js
 - Webpack-dev-server
 - React
 - Sass
-- Bootstrap
 - SQLite
 
 ## Related Projects
