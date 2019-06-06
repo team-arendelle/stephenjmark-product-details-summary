@@ -2,6 +2,8 @@
 
 An Amazon inspired product summary component for displaying essential product information such as name, company, price, and rating. The component is  equipped to show multiple image views with hover-over zoom capability, as well as flexibily render buying options with varying styles of user input. 
 
+### [Live Demo](http://18.216.224.79/7)
+
 ## About the Project
 
 This repository contains the sourcecode for a single component of an Amazon inspired product details page; built with a microservice architecture. The component is designed as a full stack service and includes an in-store memeory database, along with a web server which serves a client application and a restful api.
